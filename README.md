@@ -1,7 +1,17 @@
-This is MIDI Fingers, a python-based program that uses the Leap Motion device to generate MIDI.
+This is MIDI Fingers, a python-based program that uses the Leap Motion
+device to generate MIDI.  It has been developed and only tested
+on Windows.
 
-This is the source-code-only version.  It has been developed and only tested
-on Windows.  To use, you need to install:
+RUNNING IT
+----------
+If you just want to run it, you should be able to unzip
+the midifingers.zip file to create a midifingers directory, which will
+contain everything needed to run it, including the Python interpreter.
+Just execute the midifingers.exe file you'll find there.
+
+CHANGING IT
+-----------
+If you want to modify the program, you will need to install:
 
     Python 2.7  http://www.python.org/download/
                 Tested with python 2.7.3, 32-bit version.
@@ -18,15 +28,9 @@ You also need the following files from the Leap SDK:
     Leap.py
     LeapPython.pyd
 
-You may also need the following files (not sure):
+You may also need the following files:
 
     msvcp100.dll
     msvcr100.dll
-
-Also included in this repository is midifingers.zip.  This contains a
-complete standalone package that contains everything you need to run
-(including the Python interpreter).  You should be able to just unzip
-that file to create a directory named midifingers, and then
-execute the midifingers.exe file in that directory.
 
 by Tim Thompson, me@timthompson.com, http://timthompson.com
