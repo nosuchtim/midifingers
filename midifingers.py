@@ -9,6 +9,7 @@
 
 import sys
 import time
+import math
 from nosuch.midiutil import *
 from nosuch.midipypm import *
 import Leap, sys
