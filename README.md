@@ -23,4 +23,10 @@ You may also need the following files (not sure):
     msvcp100.dll
     msvcr100.dll
 
+Also included in this repository is midifingers.zip.  This contains a
+complete standalone package that contains everything you need to run
+(including the Python interpreter).  You should be able to just unzip
+that file to create a directory named midifingers, and then
+execute the midifingers.exe file in that directory.
+
 by Tim Thompson, me@timthompson.com, http://timthompson.com
