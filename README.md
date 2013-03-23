@@ -21,7 +21,6 @@ You also need the following files from the Leap SDK:
 You may also need the following files (not sure):
 
     msvcp100.dll
-    msvcp90.dll
     msvcr100.dll
 
 by Tim Thompson, me@timthompson.com, http://timthompson.com
