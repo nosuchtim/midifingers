@@ -164,3 +164,11 @@ pip-log.txt
 
 # Vim temporary files
 *~
+
+# Leap SDK files that shouldn't be checked in
+Leap.dll
+Leap.py
+LeapPython.pyd
+msvcp100.dll
+msvcp90.dll
+msvcr100.dll

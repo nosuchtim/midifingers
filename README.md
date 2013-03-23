@@ -12,4 +12,16 @@ on Windows.  To use, you need to install:
     PySide      http://qt-project.org/wiki/PySide_Binaries_Windows
                 Tested with pyside 1.1.2, 32-bit version for python 2.7.
 
+You also need the following files from the Leap SDK:
+
+    Leap.dll
+    Leap.py
+    LeapPython.pyd
+
+You may also need the following files (not sure):
+
+    msvcp100.dll
+    msvcp90.dll
+    msvcr100.dll
+
 by Tim Thompson, me@timthompson.com, http://timthompson.com
