@@ -166,6 +166,7 @@ pip-log.txt
 *~
 
 # Leap SDK files that shouldn't be checked in
+distfiles
 Leap.dll
 Leap.py
 LeapPython.pyd
