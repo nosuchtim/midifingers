@@ -11,7 +11,6 @@ import sys
 import time
 from nosuch.midiutil import *
 from nosuch.midipypm import *
-from nosuch.oscutil import *
 import Leap, sys
 
 try:
@@ -786,31 +785,6 @@ def leapcallback(frame,parent):
 			# 	f.id,f.hand.id,f.width,f.length,f.is_valid,f.is_finger,pos[0],pos[1],pos[2])
 			parent.cursormove(f.id,scaledpos)
 
-def osccallback(ev,parent):
-	for m in ev.oscmsg:
-		if len(m) < 3:
-			continue
-		if m[2] == "alive":
-			# Remove any values in self.sids that aren't still alive.
-			alive = {}
-			for n in range(3,len(m)):
-				alive[int(m[n])] = 1
-			toremove = {}
-			for k in self.sids.keys():
-				if not (k in alive):
-					del self.sids[k]
-			continue
-		elif m[2] == "fseq":
-			continue
-
-		elif m[2] != "set":
-			print "Unexpected command? ",m[2]
-			continue
-
-		sid = int(m[3])
-		pos = (m[4],m[5],m[6])
-		parent.cursormove(sid,pos)
-
 class LeapMonitor(Leap.Listener):
 
     def __init__(self,callback,data):
@@ -847,22 +821,12 @@ if __name__ == "__main__":
 		midiinputname = "None"
 	else:
 		midiinputname = args[2]
-	if len(args) < 4:
-		oscinputname = None
-	else:
-		oscinputname = args[3]
 
 	App = QtGui.QApplication(sys.argv)
 
 	Mf = MidiFingers()
 	Mf.set_midiin(midiinputname)
 	Mf.set_midiout(midioutputname)
-
-	if oscinputname:
-		port = re.compile(".*@").search(oscinputname).group()[:-1]
-		host = re.compile("@.*").search(oscinputname).group()[1:]
-		oscmon = OscMonitor(host,port)
-		oscmon.setcallback(osccallback,Mf)
 
 	leapmon = LeapMonitor(leapcallback,Mf)
 
